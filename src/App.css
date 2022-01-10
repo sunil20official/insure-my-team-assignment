@@ -1,14 +1,4 @@
-.card-container {
-  /* border: 2px solid black; */
-}
-
-.user-name {
-}
 
 .card-heading {
   font-size: small;
-}
-
-@media (min-width : 601px) and (max-width:850px) {
-  
 }

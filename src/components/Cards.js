@@ -1,14 +1,12 @@
 import React from 'react'
 
- const Cards = ( {cards} ) => {
-
-  console.log(cards);
+ const Cards = ( {cards}  ) => {
 
   return (
     <div className='container card-container' style={{textAlign:"center"}}>
       {
-        cards == '' ? 
-        <div className="preloader-wrapper active" style={{textAlign:"center" , margin:"auto"}} >
+        cards.length === 0 ? 
+        <div className="preloader-wrapper active" style={{textAlign:"center" , margin:"20rem"}} >
           <div className="spinner-layer spinner-red-only">
             <div className="circle-clipper left">
               <div className="circle"></div>
@@ -23,7 +21,7 @@ import React from 'react'
          <div className="row">
           {
             cards.map((card) => (
-              <div className="col s12 m6">
+              <div className="col s12 m6" key={card.id}>
                 <div className="card cyan accent-1 z-depth-4">
                     <div className="card-content black-text darken-4" style={{}}>
                       <span className="card-title card-heading" style={{fontSize:"medium" , lineHeight:"30px"}}>
